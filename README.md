@@ -10,3 +10,4 @@ Currently, two official plugins are available:
 ## Running through basic setup
 
 - Tailwind (obvs.)
+- [Vercel](https://tm001react.vercel.app/)
