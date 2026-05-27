@@ -11,7 +11,7 @@ function App() {
         </div>
       </div>
       <div className="bg-gray-200 p-4 text-center">
-        <div className="container mx-auto p-4 outline outline-1 outline-gray-300 text-center">
+        <div className="container mx-auto p-4 outline-1 outline-gray-300 text-center">
           <h2 className="text-2xl font-bold text-green-600">An h2 heading</h2>
           <p>A different paragraph of text.</p>
           <p>Another different paragraph of text to test updates.</p>
