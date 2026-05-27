@@ -11,3 +11,9 @@ Currently, two official plugins are available:
 
 - Tailwind (obvs.)
 - [Demo on Vercel](https://tm001react.vercel.app/)
+
+## Getting back into it
+
+It's been a while since I used React, and it's coming back quite easily.
+
+Still not so sure about Tailwind CSS though :/
