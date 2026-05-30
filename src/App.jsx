@@ -19,15 +19,29 @@ function App() {
         </div>
       </div>
       <div className="bg-gray-300 p-4 text-center grid xs:grid-cols-1 md:grid-cols-2 gap-4">
-        <Card title="A feature 1" description="A description of the feature." />
+        <Card
+          title="A feature 1"
+          description="A description of the feature."
+          buttonText="Try Feature 1"
+          url="/feature1"
+        />
         <Card
           title="Another feature 2"
           description="A description of the other feature."
+          buttonText="Try Feature 2"
+          url="/feature2"
         />
-        <Card title="A feature 3" description="A description of the feature." />
+        <Card
+          title="A feature 3"
+          description="A description of the feature."
+          buttonText="Try Feature 3"
+          url="/feature3"
+        />
         <Card
           title="Another feature 4"
           description="A description of the other feature."
+          buttonText="Try Feature 4"
+          url="/feature4"
         />
       </div>
     </>
