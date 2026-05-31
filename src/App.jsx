@@ -1,7 +1,10 @@
+import { useState } from "react";
 import "./App.css";
 import Card from "./components/Card.jsx";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [value, setValue] = useState(0);
   return (
     <>
       <div className="bg-gray-200 p-4 text-center">
@@ -12,10 +15,88 @@ function App() {
         </div>
       </div>
       <div className="bg-gray-100 p-4 text-center">
-        <div className="container mx-auto p-4 outline-1 outline-gray-300 text-center">
+        <div className="container mx-auto p-4 text-center">
           <h2 className="text-2xl font-bold text-green-600">An h2 heading</h2>
           <p>A different paragraph of text.</p>
           <p>Another different paragraph of text to test updates.</p>
+        </div>
+      </div>
+      <div className="bg-gray-100 p-10 text-center">
+        <h3 className="text-2xl font-bold text-green-600">Counter</h3>
+        <p>Count is: {count}</p>
+        <div>
+          <button
+            onClick={() => setCount(count + 1)}
+            style={{
+              backgroundColor: "blue",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              margin: "10px 5px",
+              minWidth: "105px",
+            }}
+          >
+            Increase
+          </button>
+          <button
+            onClick={() => setCount((count) => Math.max(count - 1, 0))} // Prevent count from going below 0
+            style={{
+              backgroundColor: "blue",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              margin: "10px 5px",
+              minWidth: "105px",
+            }}
+          >
+            Decrease
+          </button>
+          <button
+            onClick={() => {
+              setCount(0);
+            }}
+            style={{
+              backgroundColor: "blue",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              margin: "10px 5px",
+              minWidth: "105px",
+            }}
+          >
+            Reset
+          </button>
+        </div>
+        <div style={{ marginBottom: "20px" }}>
+          <input
+            type="text"
+            placeholder="Enter a value"
+            value={value}
+            style={{
+              padding: "10px",
+              borderRadius: "5px",
+              border: "1px solid #ccc",
+              marginTop: "10px",
+              width: "200px",
+            }}
+            onChange={(e) => setValue(Number(e.target.value))}
+          />
+          <button
+            style={{
+              backgroundColor: "blue",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              margin: "10px 5px",
+              minWidth: "105px",
+            }}
+            onClick={() => {
+              setCount(value);
+              setValue(0);
+            }}
+          >
+            Set to Value {value}
+          </button>
         </div>
       </div>
       <div className="bg-gray-300 p-4 text-center grid xs:grid-cols-1 md:grid-cols-2 gap-4">
