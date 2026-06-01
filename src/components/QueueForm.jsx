@@ -14,7 +14,7 @@ export default function QueueForm({ onAddToQueue }) {
 
   return (
     <div className="bg-gray-200 text-center">
-      <h3 className="text-xl font-bold text-purple-600">Add Ticket</h3>
+      <h3 className="text-xl font-bold text-purple-600 mb-4">Add Ticket</h3>
       <form className="queue-form" onSubmit={handleSubmit}>
         <div
           className="mb-4"
@@ -43,6 +43,7 @@ export default function QueueForm({ onAddToQueue }) {
             onChange={(e) => setIssue(e.target.value)}
           />
         </div>
+
         <div
           className="mb-4"
           style={{
@@ -62,7 +63,7 @@ export default function QueueForm({ onAddToQueue }) {
             Priority{" "}
           </label>
           <select
-            className="shadow appearance-none border rounded w-full py-2 px-3 bg-blue-50 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow border rounded w-full py-2 px-3 bg-blue-50 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="priority"
             value={priority}
             onChange={(e) => setPriority(e.target.value)}

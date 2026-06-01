@@ -2,21 +2,25 @@ import { useState } from "react";
 import "./App.css";
 import Card from "./components/Card.jsx";
 import QueueForm from "./components/QueueForm.jsx";
+import QueueDisplay from "./components/QueueDisplay.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
   const [value, setValue] = useState(0);
   const [queue, setQueue] = useState([]);
   const addToQueue = (item) => {
-    setQueue((prevQueue) => [...prevQueue, item]);
+    setQueue([...queue, { ...item, id: Date.now(), status: "waiting" }]);
   };
-  const updateQueueItem = (index, newItem) => {
-    setQueue((prevQueue) =>
-      prevQueue.map((item, i) => (i === index ? newItem : item)),
+  const updateStatus = (id, status) => {
+    setQueue(
+      queue.map((item) => (item.id === id ? { ...item, status } : item)),
     );
   };
-  const removeFromQueue = (index) => {
-    setQueue((prevQueue) => prevQueue.filter((_, i) => i !== index));
+  const removeFromQueue = (id) => {
+    setQueue(queue.filter((item) => item.id !== id));
+  };
+  const link = (id, link) => {
+    setQueue(queue.map((item) => (item.id === id ? { ...item, link } : item)));
   };
 
   return (
@@ -35,22 +39,28 @@ function App() {
           <p>Another different paragraph of text to test updates.</p>
         </div>
       </div>
-      <div className="bg-gray-200 p-10 text-center">
+      <div className="bg-gray-200 pt-10 text-center">
         <h2 className="text-2xl font-bold text-green-600">
           Ticket Management System
         </h2>
         <p>Manage tickets efficiently.</p>
       </div>
       <div
-        className="bg-gray-200 p-10 text-center"
+        className="bg-gray-200 pt-5 pb-10 text-center"
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space-around",
+          justifyContent: "center",
+          gap: "20px",
+          minHeight: "400px",
         }}
       >
         <QueueForm onAddToQueue={addToQueue} />
-        <h3 className="text-xl font-bold text-purple-600">Ticket Display</h3>
+        <QueueDisplay
+          queue={queue}
+          onUpdateStatus={updateStatus}
+          onRemove={removeFromQueue}
+        />
       </div>
       <div className="bg-gray-100 p-10 text-center">
         <h3 className="text-2xl font-bold text-green-600">Counter</h3>
