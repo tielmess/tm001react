@@ -35,7 +35,7 @@ export default function QueueForm({ onAddToQueue }) {
             Issue{" "}
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-blue-50 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="issue"
             type="text"
             placeholder="Enter issue"
@@ -62,7 +62,7 @@ export default function QueueForm({ onAddToQueue }) {
             Priority{" "}
           </label>
           <select
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-blue-50 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="priority"
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
