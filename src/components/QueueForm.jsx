@@ -20,16 +20,19 @@ export default function QueueForm({ onAddToQueue }) {
           className="mb-4"
           style={{
             marginBottom: "20px",
+            verticalAlign: "middle",
             display: "flex",
             flexDirection: "row",
-            alignItems: "flex-start",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className=" text-gray-700 text-sm font-bold inline-block align-middle"
+            style={{ marginRight: "10px" }}
             htmlFor="issue"
           >
-            Issue
+            Issue{" "}
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -44,16 +47,19 @@ export default function QueueForm({ onAddToQueue }) {
           className="mb-4"
           style={{
             marginBottom: "20px",
+            verticalAlign: "middle",
             display: "flex",
             flexDirection: "row",
-            alignItems: "flex-start",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <label
-            className="block text-gray-700 text-sm font-bold"
+            className="text-gray-700 text-sm font-bold inline-block align-middle"
+            style={{ marginRight: "10px" }}
             htmlFor="priority"
           >
-            Priority
+            Priority{" "}
           </label>
           <select
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
