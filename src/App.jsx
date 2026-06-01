@@ -1,10 +1,24 @@
 import { useState } from "react";
 import "./App.css";
 import Card from "./components/Card.jsx";
+import QueueForm from "./components/QueueForm.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
   const [value, setValue] = useState(0);
+  const [queue, setQueue] = useState([]);
+  const addToQueue = (item) => {
+    setQueue((prevQueue) => [...prevQueue, item]);
+  };
+  const updateQueueItem = (index, newItem) => {
+    setQueue((prevQueue) =>
+      prevQueue.map((item, i) => (i === index ? newItem : item)),
+    );
+  };
+  const removeFromQueue = (index) => {
+    setQueue((prevQueue) => prevQueue.filter((_, i) => i !== index));
+  };
+
   return (
     <>
       <div className="bg-gray-200 p-4 text-center">
@@ -20,6 +34,23 @@ function App() {
           <p>A different paragraph of text.</p>
           <p>Another different paragraph of text to test updates.</p>
         </div>
+      </div>
+      <div className="bg-gray-200 p-10 text-center">
+        <h2 className="text-2xl font-bold text-green-600">
+          Ticket Management System
+        </h2>
+        <p>Manage tickets efficiently.</p>
+      </div>
+      <div
+        className="bg-gray-200 p-10 text-center"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+        }}
+      >
+        <QueueForm onAddToQueue={addToQueue} />
+        <h3 className="text-xl font-bold text-purple-600">Ticket Display</h3>
       </div>
       <div className="bg-gray-100 p-10 text-center">
         <h3 className="text-2xl font-bold text-green-600">Counter</h3>

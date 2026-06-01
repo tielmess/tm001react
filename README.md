@@ -10,6 +10,9 @@ Currently, two official plugins are available:
 ## Running through basic setup
 
 - Tailwind (obvs.)
+- React icons
+- Use of hooks (useState)
+- Data flows
 - [Demo on Vercel](https://tm001react.vercel.app/)
 
 ## Getting back into it
