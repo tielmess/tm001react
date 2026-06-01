@@ -22,7 +22,6 @@ function App() {
   const link = (id, link) => {
     setQueue(queue.map((item) => (item.id === id ? { ...item, link } : item)));
   };
-
   return (
     <>
       <div className="bg-gray-200 p-4 text-center">

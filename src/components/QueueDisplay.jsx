@@ -11,6 +11,7 @@ function QueueDisplay({ queue, onUpdateStatus, onRemove }) {
         return "var(--text-color)";
     }
   };
+
   return (
     <div
       className="bg-gray-200 text-center"
@@ -30,7 +31,22 @@ function QueueDisplay({ queue, onUpdateStatus, onRemove }) {
             <li key={item.id} className="bg-white p-4 rounded shadow">
               <div>
                 <p className="text-lg text-gray-700 text-left">{item.issue}</p>
+
+                {/* 1. Render link under the issue text if it exists */}
+                {item.link && (
+                  <p className="text-left mt-1">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:text-blue-700 text-sm underline display: inline-block"
+                    >
+                      Details here
+                    </a>
+                  </p>
+                )}
               </div>
+
               <div className="flex justify-between items-center pt-4">
                 <div>
                   <p className="text-sm text-gray-500 font-bold text-left">
@@ -49,7 +65,6 @@ function QueueDisplay({ queue, onUpdateStatus, onRemove }) {
                       className="bg-green-500 hover:bg-green-700 text-white px-3 py-1 rounded"
                       onClick={() => onUpdateStatus(item.id, "in-progress")}
                     >
-                      {" "}
                       Start
                     </button>
                   )}
@@ -58,7 +73,6 @@ function QueueDisplay({ queue, onUpdateStatus, onRemove }) {
                       className="bg-blue-500 hover:bg-blue-700 text-white px-3 py-1 rounded"
                       onClick={() => onUpdateStatus(item.id, "completed")}
                     >
-                      {" "}
                       Complete
                     </button>
                   )}
@@ -66,7 +80,6 @@ function QueueDisplay({ queue, onUpdateStatus, onRemove }) {
                     className="bg-red-500 hover:bg-red-700 text-white px-3 py-1 rounded"
                     onClick={() => onRemove(item.id)}
                   >
-                    {" "}
                     Remove
                   </button>
                 </div>
