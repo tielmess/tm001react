@@ -15,6 +15,11 @@ Currently, two official plugins are available:
 - Data flows
 - [Demo on Vercel](https://tm001react.vercel.app/)
 
+## Tools
+
+- VS Code
+- [Fallow](https://fallow.tools/)
+
 ## Getting back into it
 
 It's been a while since I used React, and it's coming back quite easily.
