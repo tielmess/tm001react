@@ -14,12 +14,10 @@ function QueueDisplay({ queue, onUpdateStatus, onRemove }) {
 
   return (
     <div
-      className="bg-gray-200 text-center"
+      className="bg-gray-200 text-center col-span-2 md:ml-24 lg:ml-0"
       style={{
-        marginLeft: "20px",
-        marginRight: "20px",
-        minWidth: "500px",
-        maxWidth: "500px",
+        minWidth: "300px",
+        maxWidth: "600px",
       }}
     >
       <h3 className="text-xl font-bold text-purple-600 mb-4">Ticket Display</h3>

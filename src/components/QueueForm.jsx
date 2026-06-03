@@ -19,7 +19,13 @@ export default function QueueForm({ onAddToQueue }) {
   };
 
   return (
-    <div className="bg-gray-200 text-center">
+    <div
+      className="bg-gray-200 p-4 pr-0 text-center"
+      style={{
+        minWidth: "300px",
+        maxWidth: "600px",
+      }}
+    >
       <h3 className="text-xl font-bold text-purple-600 mb-4">Add Ticket</h3>
       <form className="queue-form" onSubmit={handleSubmit}>
         {/* Issue Input */}
@@ -30,7 +36,7 @@ export default function QueueForm({ onAddToQueue }) {
             verticalAlign: "middle",
             display: "flex",
             flexDirection: "row",
-            justifyContent: "center",
+            justifyContent: "right",
             alignItems: "center",
           }}
         >
@@ -59,7 +65,7 @@ export default function QueueForm({ onAddToQueue }) {
             verticalAlign: "middle",
             display: "flex",
             flexDirection: "row",
-            justifyContent: "center",
+            justifyContent: "right",
             alignItems: "center",
           }}
         >
@@ -88,7 +94,7 @@ export default function QueueForm({ onAddToQueue }) {
             verticalAlign: "middle",
             display: "flex",
             flexDirection: "row",
-            justifyContent: "center",
+            justifyContent: "right",
             alignItems: "center",
           }}
         >

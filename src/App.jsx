@@ -19,9 +19,9 @@ function App() {
   const removeFromQueue = (id) => {
     setQueue(queue.filter((item) => item.id !== id));
   };
-  const link = (id, link) => {
-    setQueue(queue.map((item) => (item.id === id ? { ...item, link } : item)));
-  };
+  // const link = (id, link) => {
+  //   setQueue(queue.map((item) => (item.id === id ? { ...item, link } : item)));
+  // };
   return (
     <>
       <div className="bg-gray-200 p-4 text-center">
@@ -45,10 +45,10 @@ function App() {
         <p>Manage tickets efficiently.</p>
       </div>
       <div
-        className="bg-gray-200 pt-5 pb-10 text-center"
+        className="bg-gray-200 p-10 pt-5 text-center grid xs:grid-cols-1 md:grid-cols-3 gap-4 place-items-center items-start"
         style={{
-          display: "flex",
-          flexDirection: "row",
+          // display: "flex",
+          // flexDirection: "row",
           justifyContent: "center",
           gap: "20px",
           minHeight: "400px",
