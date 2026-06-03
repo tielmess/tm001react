@@ -20,7 +20,7 @@ export default function QueueForm({ onAddToQueue }) {
 
   return (
     <div
-      className="bg-gray-200 p-4 pr-0 text-center"
+      className="bg-gray-200 text-center justify-items-stretch"
       style={{
         minWidth: "100%",
         maxWidth: "600px",
@@ -47,7 +47,7 @@ export default function QueueForm({ onAddToQueue }) {
           >
             Issue{" "}
           </label>
-          <input
+          <textarea
             className="shadow appearance-none border rounded w-full py-2 px-3 bg-blue-50 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="issue"
             type="text"

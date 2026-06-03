@@ -45,17 +45,26 @@ function App() {
         <p>Manage tickets efficiently.</p>
       </div>
       <div
-        className="bg-gray-200 p-10 pt-5 text-center grid xs:grid-cols-1 md:grid-cols-3 place-items-center items-start"
+        className="bg-gray-200 p-10 pt-5 text-center"
         style={{
-          minHeight: "400px",
+          minHeight: "500px",
         }}
       >
-        <QueueForm onAddToQueue={addToQueue} />
-        <QueueDisplay
-          queue={queue}
-          onUpdateStatus={updateStatus}
-          onRemove={removeFromQueue}
-        />
+        <div
+          className="bg-gray-200 p-10 pt-5 text-center grid xs:grid-cols-1 md:grid-cols-3 items-start"
+          style={{
+            maxWidth: "1000px",
+            margin: "0 auto",
+            gap: "20px",
+          }}
+        >
+          <QueueForm onAddToQueue={addToQueue} />
+          <QueueDisplay
+            queue={queue}
+            onUpdateStatus={updateStatus}
+            onRemove={removeFromQueue}
+          />
+        </div>
       </div>
       <div className="bg-gray-100 p-10 text-center">
         <h3 className="text-2xl font-bold text-green-600">Counter</h3>
