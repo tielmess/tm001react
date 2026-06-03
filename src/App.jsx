@@ -45,12 +45,8 @@ function App() {
         <p>Manage tickets efficiently.</p>
       </div>
       <div
-        className="bg-gray-200 p-10 pt-5 text-center grid xs:grid-cols-1 md:grid-cols-3 gap-4 place-items-center items-start"
+        className="bg-gray-200 p-10 pt-5 text-center grid xs:grid-cols-1 md:grid-cols-3 place-items-center items-start"
         style={{
-          // display: "flex",
-          // flexDirection: "row",
-          justifyContent: "center",
-          gap: "20px",
           minHeight: "400px",
         }}
       >

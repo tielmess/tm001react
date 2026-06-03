@@ -22,7 +22,7 @@ export default function QueueForm({ onAddToQueue }) {
     <div
       className="bg-gray-200 p-4 pr-0 text-center"
       style={{
-        minWidth: "300px",
+        minWidth: "100%",
         maxWidth: "600px",
       }}
     >
@@ -57,7 +57,7 @@ export default function QueueForm({ onAddToQueue }) {
           />
         </div>
 
-        {/* 4. Added Link Input (Between Issue and Priority) */}
+        {/* Link Input */}
         <div
           className="mb-4"
           style={{
