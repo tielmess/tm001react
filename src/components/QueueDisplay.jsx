@@ -20,7 +20,7 @@ function QueueDisplay({ queue, onUpdateStatus, onRemove }) {
         maxWidth: "100%",
       }}
     >
-      <h3 className="text-xl font-bold text-purple-600 mb-4">Ticket Display</h3>
+      <h3 className="text-xl font-bold text-blue-600 mb-4">Ticket Display</h3>
       {queue.length === 0 ? (
         <p className="text-gray-500">No tickets in the queue.</p>
       ) : (

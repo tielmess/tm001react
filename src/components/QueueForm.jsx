@@ -26,7 +26,7 @@ export default function QueueForm({ onAddToQueue }) {
         maxWidth: "600px",
       }}
     >
-      <h3 className="text-xl font-bold text-purple-600 mb-4">Add Ticket</h3>
+      <h3 className="text-xl font-bold text-blue-600 mb-4">Add Ticket</h3>
       <form className="queue-form" onSubmit={handleSubmit}>
         {/* Issue Input */}
         <div
