@@ -3,6 +3,7 @@ import "./App.css";
 import Card from "./components/Card.jsx";
 import QueueForm from "./components/QueueForm.jsx";
 import QueueDisplay from "./components/QueueDisplay.jsx";
+import Button from "./components/Button.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,6 +31,7 @@ function App() {
           <p>A paragraph of text.</p>
           <p>Another paragraph of text to test updates.</p>
         </div>
+        <Button buttonText="A button" />
       </div>
       <div className="bg-gray-100 p-4 text-center">
         <div className="container mx-auto p-4 text-center">
