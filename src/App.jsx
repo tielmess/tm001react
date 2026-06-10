@@ -4,6 +4,35 @@ import Card from "./components/Card.jsx";
 import QueueForm from "./components/QueueForm.jsx";
 import QueueDisplay from "./components/QueueDisplay.jsx";
 import Button from "./components/Button.jsx";
+import BasicProps from "./components/BasicProps.jsx";
+import ChildrenProps from "./components/ChildrenProps.jsx";
+import ComplexProps from "./components/ComplexProps.jsx";
+import RefProps from "./components/RefProps.jsx";
+import ThemeToggler from "./components/ThemeToggler.jsx";
+
+function Navigation() {
+  const isDark = true;
+
+  const sections = [
+    { id: "basic", label: "Basic Props", icon: "📦" },
+    { id: "ref", label: "Ref Props", icon: "🔗" },
+    { id: "children", label: "Children Props", icon: "👨‍👩‍👧‍👦" },
+    { id: "complex", label: "Complex Props", icon: "🧩" },
+    { id: "theme", label: "Theme Toggler", icon: "🎨" },
+  ];
+
+  return <nav className={`sticky top-0 z-50 shadow-md`}></nav>;
+}
+
+function AppContent() {
+  return (
+    <div className={`min-h-screen bg-gray-800`}>
+      <h1 className="text-3xl font-bold text-blue-600">An h1 heading</h1>
+      <p>A paragraph of text.</p>
+      <p>Another paragraph of text to test updates.</p>
+    </div>
+  );
+}
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,9 +54,10 @@ function App() {
   // };
   return (
     <>
+      <AppContent />
       <div className="bg-gray-200 p-4 text-center">
         <div className="container mx-auto p-4 outline-1 outline-gray-300 text-center">
-          <h1 className="text-3xl font-bold text-blue-600">An h1 heading</h1>
+          <h2 className="text-3xl font-bold text-blue-600">An h2 heading</h2>
           <p>A paragraph of text.</p>
           <p>Another paragraph of text to test updates.</p>
         </div>
