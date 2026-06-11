@@ -10,9 +10,9 @@ import ComplexProps from "./components/ComplexProps.jsx";
 import RefProps from "./components/RefProps.jsx";
 import ThemeToggler from "./components/ThemeToggler.jsx";
 
-function Navigation() {
-  const isDark = true;
+const isDark = true;
 
+function Navigation() {
   const sections = [
     { id: "basic", label: "Basic Props", icon: "📦" },
     { id: "ref", label: "Ref Props", icon: "🔗" },
@@ -21,15 +21,68 @@ function Navigation() {
     { id: "theme", label: "Theme Toggler", icon: "🎨" },
   ];
 
-  return <nav className={`sticky top-0 z-50 shadow-md`}></nav>;
+  return (
+    <nav
+      className={`sticky top-0 z-50 shadow-md tranition-colors ${isDark ? "bg-gray-900 text-white" : "bg-white text-gray-900"}`}
+    >
+      <div>
+        <div
+          className={`container mx-auto p-4 flex flex-wrap justify-center ${isDark ? "text-white" : "text-gray-900"}`}
+        >
+          {sections.map((section) => (
+            <button
+              key={section.id}
+              href={`#${section.id}`}
+              className={`px-4 py-2 rounded-lg font-medium bg-blue-600 text-white hover:bg-blue-700 mr-2 mt-2`}
+            >
+              <span>{section.icon}</span>
+              {section.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
 }
 
 function AppContent() {
   return (
     <div className={`min-h-screen bg-gray-800`}>
-      <h1 className="text-3xl font-bold text-blue-600">An h1 heading</h1>
-      <p>A paragraph of text.</p>
-      <p>Another paragraph of text to test updates.</p>
+      <Navigation />
+      <div className="container mx-auto px-4 py-8">
+        <header
+          className={`mb-12 text-center transition-colors ${isDark ? "text-white" : "text-gray-900"}`}
+        >
+          <h1
+            className={`text-3xl font-bold ${isDark ? "text-white" : "text-gray-900"}`}
+          >
+            React props
+          </h1>
+          <p
+            className={`text-lg ${isDark ? "text-gray-300" : "text-gray-600"}`}
+          >
+            Explore different types of React props and how to use them
+            &nbsp;effectively.
+          </p>
+        </header>
+        <div className="space-y-8">
+          <section id="basic" className="scroll-mt-200 text-white">
+            <BasicProps />
+          </section>
+          <section id="ref" className="scroll-mt-20 text-white">
+            <RefProps />
+          </section>
+          <section id="children" className="scroll-mt-20 text-white">
+            <ChildrenProps />
+          </section>
+          <section id="complex" className="scroll-mt-20 text-white">
+            <ComplexProps />
+          </section>
+          <section id="theme" className="scroll-mt-20 text-white">
+            <ThemeToggler />
+          </section>
+        </div>
+      </div>
     </div>
   );
 }
@@ -55,6 +108,7 @@ function App() {
   return (
     <>
       <AppContent />
+
       <div className="bg-gray-200 p-4 text-center">
         <div className="container mx-auto p-4 outline-1 outline-gray-300 text-center">
           <h2 className="text-3xl font-bold text-blue-600">An h2 heading</h2>
