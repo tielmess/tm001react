@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Button({ text, color, size, onClick, disabled, secondary, success }) {
+function Button({ text, color, size, onClick, disabled }) {
   return (
     <button
       onClick={onClick}
@@ -36,7 +36,7 @@ function BasicProps() {
         <Button text="Primary" color="primary" />
         <Button text="Secondary" color="secondary" />
         <Button text="Success" color="success" />
-        <Button text="Disabled" color="primary" disabled />
+        <Button text="Disabled" color="primary" disabled={true} />
         <Button
           text={`Clicked ${clickCount} times`}
           color="primary"
@@ -47,12 +47,11 @@ function BasicProps() {
         <Button text="Primary" color="primary" size="extra-large" />
         <Button text="Secondary" color="secondary" size="small" />
         <Button text="Success" color="success" size="medium" />
-        <Button text="Disabled" color="primary" disabled size="extra-large" />
         <Button
-          text={`Clicked ${clickCount} times`}
-          color="primary"
-          size="medium"
-          onClick={() => setClickCount(clickCount + 1)}
+          text="Disabled"
+          color="success"
+          disabled={true}
+          size="extra-large"
         />
       </div>
     </section>
