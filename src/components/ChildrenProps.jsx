@@ -1,25 +1,25 @@
 function Card({ children, title, color = "blue" }) {
   const colorClasses = {
-    blue: "border-blue-500 bg-blue-300",
-    green: "border-green-500 bg-green-300",
-    purple: "border-purple-500 bg-purple-300",
-    red: "border-red-500 bg-red-300",
+    blue: "border-blue-500 bg-blue-200",
+    green: "border-green-500 bg-green-200",
+    purple: "border-purple-500 bg-purple-200",
+    red: "border-red-500 bg-red-200",
   };
   return (
     <div
       className={`border-l-4 ${colorClasses[color]} p-6 rounded-lg shadow-md`}
     >
       {title && (
-        <h3 className="text-xl font-bold mb-3 text-gray-800">{title}</h3>
+        <h3 className="text-xl font-bold mb-3 text-gray-900">{title}</h3>
       )}
-      <div className="text-gray-700">{children}</div>
+      <div className="text-gray-800">{children}</div>
     </div>
   );
 }
 
 function Container({ children, layout = "vertical" }) {
   const layoutClasses = {
-    vertical: "flex flex-col space-y-4",
+    vertical: "flex flex-col-4 gap-4",
     horizontal: "flex flex-row flex-wrap gap-4",
     grid: "grid grid-cols-1 md:grid-cols-2 gap-4",
   };
@@ -37,9 +37,45 @@ function ChildrenProps() {
       </p>
       <div className="space-y-4">
         <h3 className="text-lg font-semibold text-gray-800">
-          Example of a Card component with children:
+          Example of a Card component with children
         </h3>
+        <h4 className="text-md font-semibold text-gray-800">Grid:</h4>
         <Container layout="grid">
+          <Card title="User Profile" color="blue">
+            <p className="mb-2">
+              <strong>Name:</strong> Fred Blogs
+            </p>
+            <p className="mb-2">
+              <strong>Email:</strong> Fred@blogs.com
+            </p>
+          </Card>
+          <Card title="User Profile" color="green">
+            <p className="mb-2">
+              <strong>Name:</strong> Fred Blogs
+            </p>
+            <p className="mb-2">
+              <strong>Email:</strong> Fred@blogs.com
+            </p>
+          </Card>
+          <Card title="User Profile" color="purple">
+            <p className="mb-2">
+              <strong>Name:</strong> Fred Blogs
+            </p>
+            <p className="mb-2">
+              <strong>Email:</strong> Fred@blogs.com
+            </p>
+          </Card>
+          <Card title="User Profile" color="red">
+            <p className="mb-2">
+              <strong>Name:</strong> Fred Blogs
+            </p>
+            <p className="mb-2">
+              <strong>Email:</strong> Fred@blogs.com
+            </p>
+          </Card>
+        </Container>
+        <h4 className="text-md font-semibold text-gray-800">Flex:</h4>
+        <Container layout="vertical">
           <Card title="User Profile" color="blue">
             <p className="mb-2">
               <strong>Name:</strong> Fred Blogs
