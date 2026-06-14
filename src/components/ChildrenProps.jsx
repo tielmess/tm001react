@@ -19,7 +19,7 @@ function Card({ children, title, color = "blue" }) {
 
 function Container({ children, layout = "vertical" }) {
   const layoutClasses = {
-    vertical: "flex flex-col-4 gap-4",
+    vertical: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4",
     horizontal: "flex flex-row flex-wrap gap-4",
     grid: "grid grid-cols-1 md:grid-cols-2 gap-4",
   };
