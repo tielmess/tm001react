@@ -28,7 +28,7 @@ function Container({ children, layout = "vertical" }) {
 
 function ChildrenProps() {
   return (
-    <section className="p-8 bg-white rounded-xl shadow-2xl">
+    <div className="p-8 bg-white rounded-xl shadow-2xl">
       <h2 className="text-2xl font-bold mb-4 text-gray-800">Children Props</h2>
       <p className="desc mb-8 text-gray-600">
         This section demonstrates the use of children props in React. Children
@@ -46,7 +46,7 @@ function ChildrenProps() {
               <strong>Name:</strong> Fred Blogs
             </p>
             <p className="mb-2">
-              <strong>Email:</strong> Fred@blogs.com
+              <strong>Email:</strong> Fred-01@blogs.com
             </p>
           </Card>
           <Card title="User Profile" color="green">
@@ -54,7 +54,7 @@ function ChildrenProps() {
               <strong>Name:</strong> Fred Blogs
             </p>
             <p className="mb-2">
-              <strong>Email:</strong> Fred@blogs.com
+              <strong>Email:</strong> Fred-02@blogs.com
             </p>
           </Card>
           <Card title="User Profile" color="purple">
@@ -62,7 +62,7 @@ function ChildrenProps() {
               <strong>Name:</strong> Fred Blogs
             </p>
             <p className="mb-2">
-              <strong>Email:</strong> Fred@blogs.com
+              <strong>Email:</strong> Fred-03@blogs.com
             </p>
           </Card>
           <Card title="User Profile" color="red">
@@ -70,7 +70,7 @@ function ChildrenProps() {
               <strong>Name:</strong> Fred Blogs
             </p>
             <p className="mb-2">
-              <strong>Email:</strong> Fred@blogs.com
+              <strong>Email:</strong> Fred-04@blogs.com
             </p>
           </Card>
         </Container>
@@ -81,7 +81,7 @@ function ChildrenProps() {
               <strong>Name:</strong> Fred Blogs
             </p>
             <p className="mb-2">
-              <strong>Email:</strong> Fred@blogs.com
+              <strong>Email:</strong> Fred-01@blogs.com
             </p>
           </Card>
           <Card title="User Profile" color="green">
@@ -89,7 +89,7 @@ function ChildrenProps() {
               <strong>Name:</strong> Fred Blogs
             </p>
             <p className="mb-2">
-              <strong>Email:</strong> Fred@blogs.com
+              <strong>Email:</strong> Fred-02@blogs.com
             </p>
           </Card>
           <Card title="User Profile" color="purple">
@@ -97,7 +97,7 @@ function ChildrenProps() {
               <strong>Name:</strong> Fred Blogs
             </p>
             <p className="mb-2">
-              <strong>Email:</strong> Fred@blogs.com
+              <strong>Email:</strong> Fred-03@blogs.com
             </p>
           </Card>
           <Card title="User Profile" color="red">
@@ -105,12 +105,12 @@ function ChildrenProps() {
               <strong>Name:</strong> Fred Blogs
             </p>
             <p className="mb-2">
-              <strong>Email:</strong> Fred@blogs.com
+              <strong>Email:</strong> Fred-04@blogs.com
             </p>
           </Card>
         </Container>
       </div>
-    </section>
+    </div>
   );
 }
 

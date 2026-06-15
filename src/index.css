@@ -4,3 +4,12 @@
 p.desc {
   max-width: 75ch;
 }
+p > code {
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.5px;
+  font-size: 95%;
+  font-weight: 700;
+  padding: 1px 3px;
+  background-color: #efefef;
+}

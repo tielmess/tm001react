@@ -15,9 +15,9 @@ const isDark = true;
 function Navigation() {
   const sections = [
     { id: "basic", label: "Basic Props", icon: "📦" },
-    { id: "ref", label: "Ref Props", icon: "🔗" },
     { id: "children", label: "Children Props", icon: "👨‍👩‍👧‍👦" },
     { id: "complex", label: "Complex Props", icon: "🧩" },
+    { id: "ref", label: "Ref Props", icon: "🔗" },
     { id: "theme", label: "Theme Toggler", icon: "🎨" },
   ];
 
@@ -69,14 +69,14 @@ function AppContent() {
           <section id="basic" className="scroll-mt-200 text-white">
             <BasicProps />
           </section>
-          <section id="ref" className="scroll-mt-20 text-white">
-            <RefProps />
-          </section>
           <section id="children" className="scroll-mt-20 text-white">
             <ChildrenProps />
           </section>
           <section id="complex" className="scroll-mt-20 text-white">
             <ComplexProps />
+          </section>
+          <section id="ref" className="scroll-mt-20 text-white">
+            <RefProps />
           </section>
           <section id="theme" className="scroll-mt-20 text-white">
             <ThemeToggler />
