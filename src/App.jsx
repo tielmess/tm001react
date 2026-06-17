@@ -8,11 +8,13 @@ import BasicProps from "./components/BasicProps.jsx";
 import ChildrenProps from "./components/ChildrenProps.jsx";
 import ComplexProps from "./components/ComplexProps.jsx";
 import RefProps from "./components/RefProps.jsx";
-import ThemeToggler from "./components/ThemeToggler.jsx";
-
-const isDark = true;
+import ThemeToggler, {
+  ThemeProvider,
+  useTheme,
+} from "./components/ThemeToggler.jsx";
 
 function Navigation() {
+  const isDark = true;
   const sections = [
     { id: "basic", label: "Basic Props", icon: "📦" },
     { id: "children", label: "Children Props", icon: "👨‍👩‍👧‍👦" },
@@ -46,8 +48,10 @@ function Navigation() {
 }
 
 function AppContent() {
+  // const isDark = true;
+  const { isDark } = useTheme();
   return (
-    <div className={`min-h-screen bg-gray-800`}>
+    <div className={`min-h-screen ${isDark ? "bg-gray-900" : "bg-gray-200"}`}>
       <Navigation />
       <div className="container mx-auto px-4 py-8">
         <header
@@ -107,7 +111,9 @@ function App() {
   // };
   return (
     <>
-      <AppContent />
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
 
       <div className="bg-gray-200 p-4 text-center">
         <div className="container mx-auto p-4 outline-1 outline-gray-300 text-center">
