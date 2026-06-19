@@ -9,7 +9,7 @@ function CustomHooks() {
     <>
       <div className="p-8 bg-white rounded-xl shadow-2xl">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">Custom Hooks</h2>
-        <div className="app">
+        <div className="shop-app">
           <header>
             <h3 className="text-xl font-bold mb-4 text-gray-800">
               Shopping Cart
