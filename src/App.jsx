@@ -53,7 +53,7 @@ function AppContent() {
   // const isDark = true;
   const { isDark } = useTheme();
   return (
-    <div className={`min-h-screen ${isDark ? "bg-gray-900" : "bg-gray-200"}`}>
+    <div className={`min-h-screen ${isDark ? "bg-gray-900" : "bg-gray-300"}`}>
       <Navigation />
       <div className="container mx-auto px-4 py-8">
         <header
@@ -65,7 +65,7 @@ function AppContent() {
             React props
           </h1>
           <p
-            className={`text-lg ${isDark ? "text-gray-300" : "text-gray-600"}`}
+            className={`text-lg ${isDark ? "text-gray-300" : "text-gray-700"}`}
           >
             Explore different types of React props and how to use them
             &nbsp;effectively.
@@ -91,7 +91,6 @@ function AppContent() {
           <section id="custom" className="scroll-mt-20 text-white">
             <CustomHooks />
           </section>
-          <hr />
         </div>
       </div>
     </div>
