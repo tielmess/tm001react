@@ -12,6 +12,7 @@ import ThemeToggler, {
   ThemeProvider,
   useTheme,
 } from "./components/ThemeToggler.jsx";
+import CustomHooks from "./components/CustomHooks.jsx";
 
 function Navigation() {
   const isDark = true;
@@ -85,6 +86,11 @@ function AppContent() {
           <section id="theme" className="scroll-mt-20 text-white">
             <ThemeToggler />
           </section>
+          <hr />
+          <section id="custom" className="scroll-mt-20 text-white">
+            <CustomHooks />
+          </section>
+          <hr />
         </div>
       </div>
     </div>
@@ -114,10 +120,12 @@ function App() {
       <ThemeProvider>
         <AppContent />
       </ThemeProvider>
-
+      <hr />
       <div className="bg-gray-200 p-4 text-center">
-        <div className="container mx-auto p-4 outline-1 outline-gray-300 text-center">
-          <h2 className="text-3xl font-bold text-blue-600">An h2 heading</h2>
+        <div className="container mx-auto p-4 text-center">
+          <h2 className="text-3xl font-bold text-blue-600 mt-8">
+            An h2 heading
+          </h2>
           <p>A paragraph of text.</p>
           <p>Another paragraph of text to test updates.</p>
         </div>
