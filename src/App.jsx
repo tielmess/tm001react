@@ -34,14 +34,14 @@ function Navigation() {
           className={`container mx-auto p-4 flex flex-wrap justify-center ${isDark ? "text-white" : "text-gray-900"}`}
         >
           {sections.map((section) => (
-            <button
+            <a
               key={section.id}
               href={`#${section.id}`}
               className={`px-4 py-2 rounded-lg font-medium bg-blue-600 text-white hover:bg-blue-700 mr-2 mt-2`}
             >
               <span>{section.icon}</span>
               {section.label}
-            </button>
+            </a>
           ))}
         </div>
       </div>
