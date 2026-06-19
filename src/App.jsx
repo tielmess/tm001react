@@ -22,6 +22,7 @@ function Navigation() {
     { id: "complex", label: "Complex Props", icon: "🧩" },
     { id: "ref", label: "Ref Props", icon: "🔗" },
     { id: "theme", label: "Theme Toggler", icon: "🎨" },
+    { id: "custom", label: "Custom Hooks", icon: "🪝" },
   ];
 
   return (
