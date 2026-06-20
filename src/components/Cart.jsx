@@ -17,7 +17,7 @@ function Cart({ cart, onUpdateQuantity, onRemove, total }) {
         />
       ))}
       <div className="cart-total">
-        <h3>Total: ${typeof total === "string" ? total : total.toFixed(2)}</h3>
+        <h3>Total: £{typeof total === "string" ? total : total.toFixed(2)}</h3>
         <button className="checkout-btn">Checkout</button>
       </div>
     </div>
